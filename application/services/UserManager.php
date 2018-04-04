@@ -22,7 +22,7 @@ class UserManager extends BaseManager
 
 
     public function getUserByLogin($login){
-        $sql = "select * from {$this->table} where login = \'{$login}\'";
+        $sql = "select * from {$this->table} where login = '{$login}'";
         return $this->executeQuery($sql);
     }
 
