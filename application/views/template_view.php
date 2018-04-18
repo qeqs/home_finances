@@ -48,9 +48,5 @@ http://www.freecsstemplates.org
     <br class="clearfix"/>
   </div>
 </div>
-
-<div id="footer">
-  <a href="/">Home Finances</a> &copy; 2018</a>
-</div>
 </body>
 </html>
