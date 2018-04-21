@@ -6,7 +6,7 @@ class Controller_Main extends Controller
     {
         if (UserTwo::isGuest()) {
             // Подключаем вид
-            require_once(ROOT . '/views/template_view.php');
+            require_once(ROOT . '/views/template_unreg.php');
         } else {
             // Подключаем вид
             require_once(ROOT . '/views/template_view.php');
