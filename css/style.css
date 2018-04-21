@@ -85,6 +85,11 @@ a {
 	position: relative;
 }
 
+#charts {
+	float: inside;
+	position: center;
+}
+
 #header {
 	height: 130px;
 	padding: 40px;

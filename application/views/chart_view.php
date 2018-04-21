@@ -15,18 +15,18 @@
     }
 
     function drawCharts() {
-        <?php if($data!=null){
-            //echo ($data['IncomeOutcomeChart'])?>
+        <?php if($data != null){?>
         chart(<?php echo json_encode($data['IncomeOutcomeChart']) ?>, 'income_outcome');
         chart(<?php echo json_encode($data['IncomeChart']) ?>, 'income');
         chart(<?php echo json_encode($data['OutcomeChart']) ?>, 'outcome');
         <?}
-            else{
+        else {
             echo "<p>There is nothing to show</p>";
-            }?>
+        }?>
     }
 </script>
-<?php echo json_encode($data['IncomeOutcomeChart'])?>
-<div id="income_outcome" style="width: 900px; height: 500px"></div>
-<div id="income" style="width: 900px; height: 500px"></div>
-<div id="outcome" style="width: 900px; height: 500px"></div>
+<div id="charts">
+    <div id="income_outcome" style="width: 900px; height: 500px"></div>
+    <div id="income" style="width: 900px; height: 500px"></div>
+    <div id="outcome" style="width: 900px; height: 500px"></div>
+</div>
