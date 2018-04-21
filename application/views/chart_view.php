@@ -26,6 +26,7 @@
             }?>
     }
 </script>
+<?php echo json_encode($data['IncomeOutcomeChart'])?>
 <div id="income_outcome" style="width: 900px; height: 500px"></div>
 <div id="income" style="width: 900px; height: 500px"></div>
 <div id="outcome" style="width: 900px; height: 500px"></div>
