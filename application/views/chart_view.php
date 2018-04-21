@@ -16,7 +16,7 @@
 
     function drawCharts() {
         <?php if($data!=null){
-            echo ($data['IncomeOutcomeChart'])?>
+            //echo ($data['IncomeOutcomeChart'])?>
         chart(<?php echo $data['IncomeOutcomeChart'] ?>, 'income_outcome');
         chart(<?php echo $data['IncomeChart'] ?>, 'income');
         chart(<?php echo $data['OutcomeChart'] ?>, 'outcome');

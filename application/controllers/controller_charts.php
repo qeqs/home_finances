@@ -20,7 +20,6 @@ class controller_charts extends Controller
             "IncomeChart" => $this->model->getIncomeChart($user),
             "OutcomeChart" => $this->model->getOutcomeChart($user)
         );
-        echo json_encode($data);
         $this->view->generate('chart_view.php', 'template_view.php', $data);
     }
 }
