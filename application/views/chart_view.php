@@ -15,7 +15,7 @@
     }
 
     function drawCharts() {
-        <?php explode($data) ?>
+        <?php extract($data); ?>
         chart(<?php $data.IncomeOutcomeChart ?>, 'income_outcome');
     }
 </script>

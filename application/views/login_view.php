@@ -22,7 +22,7 @@
 
 <?php extract($data); ?>
 <?php if($login_status=="access_granted") { ?>
-<p style="color:green">Sucsess.</p>
+<p style="color:green">Success.</p>
 <?php } elseif($login_status=="access_denied") { ?>
 <p style="color:red">Login and/or password was wrong.</p>
 <?php } ?>
