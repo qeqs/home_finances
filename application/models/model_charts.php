@@ -33,8 +33,8 @@ class model_charts extends Model
         $data[0][0] = "\"Date\"";
         $data[0][1] = "\"Values\"";
         for ($i = 1; $i < count($finances); $i++) {
-            $data[i][0] = $finances[$i-1]->date;
-            $data[i][1] = $finances[$i-1]->value * $sign;
+            $data[$i][0] = $finances[$i-1]->date;
+            $data[$i][1] = $finances[$i-1]->value * $sign;
         }
         return $data;
     }
