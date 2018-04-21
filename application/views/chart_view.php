@@ -25,8 +25,7 @@
         }?>
     }
 </script>
-<div id="charts">
-    <div id="income_outcome" style="width: 900px; height: 500px"></div>
-    <div id="income" style="width: 900px; height: 500px"></div>
-    <div id="outcome" style="width: 900px; height: 500px"></div>
-</div>
+<br/>
+    <div id="income_outcome" style="position: center; width: 900px; height: 500px"></div>
+    <div id="income" style="position: center; width: 900px; height: 500px"></div>
+    <div id="outcome" style="position: center; width: 900px; height: 500px"></div>
