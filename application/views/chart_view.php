@@ -15,10 +15,14 @@
     }
 
     function drawCharts() {
-        <?php //extract($data); ?>
+        <?php if($data!=null){ ?>
         chart(<?php $data['IncomeOutcomeChart'] ?>, 'income_outcome');
         chart(<?php $data['IncomeChart'] ?>, 'income');
         chart(<?php $data['OutcomeChart'] ?>, 'outcome');
+        <?}
+            else{
+            echo "<p>There is nothing to show</p>";
+            }?>
     }
 </script>
 <div id="income_outcome" style="width: 900px; height: 500px"></div>
