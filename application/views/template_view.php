@@ -1,7 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC>
+<html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Home Finances</title>
@@ -24,11 +22,9 @@
                 <li><a href="/charts">Charts</a></li>
                 <li class="last"><a href="/login/logout">Logout</a></li>
             </ul>
-
             <br class="clearfix"/>
         </div>
     </div>
-
     <div id="content">
         <div class="box">
             <?php include 'application/views/' . $content_view; ?>
