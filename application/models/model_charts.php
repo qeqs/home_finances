@@ -45,4 +45,24 @@ class model_charts extends Model
         return $data;
     }
 
+
+    public function mergeCharts($left, $titleLeft, $right, $titleRight)
+    {
+        $data = array();
+        if (count($left) > 0 && count($right) > 0) {
+            $data[0][0] = "\"Date\"";
+            $data[0][1] = "\"".$titleLeft."\"";
+            $data[0][2] = "\"".$titleRight."\"";
+            for ($i = 1; $i < count($left); $i++) {
+                $data[$i][0] = $left[$i][0];
+                $data[$i][1] = $left[$i][1];
+            }
+            for ($i = 1; $i < count($right); $i++) {
+                $data[$i][0] = $right[$i][0];
+                $data[$i][2] = $right[$i][1];
+            }
+        }
+        return $data;
+    }
+
 }
