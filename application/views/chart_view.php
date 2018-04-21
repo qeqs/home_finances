@@ -16,9 +16,11 @@
 
     function drawCharts() {
         <?php extract($data); ?>
-        chart(<?php $data.IncomeOutcomeChart ?>, 'income_outcome');
+        chart(<?php $data['IncomeOutcomeChart'] ?>, 'income_outcome');
+        chart(<?php $data['IncomeChart'] ?>, 'income');
+        chart(<?php $data['OutcomeChart'] ?>, 'outcome');
     }
 </script>
 <div id="income_outcome" style="width: 900px; height: 500px"></div>
-<div id="curve_chart" style="width: 900px; height: 500px"></div>
-<div id="curve_chart" style="width: 900px; height: 500px"></div>
+<div id="income" style="width: 900px; height: 500px"></div>
+<div id="outcome" style="width: 900px; height: 500px"></div>
