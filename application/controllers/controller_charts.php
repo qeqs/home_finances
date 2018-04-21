@@ -15,12 +15,12 @@ class controller_charts extends Controller
         if($user == null){
             (new Route)->MainPage();
         }
-        $model = array(
+        $data = array(
             "IncomeOutcomeChart" => $this->model->getIncomeOutcomeChart($user),
             "IncomeChart" => $this->model->getIncomeChart($user),
             "OutcomeChart" => $this->model->getOutcomeChart($user)
         );
-        echo $model;
-        $this->view->generate('chart_view.php', 'template_view.php', $model);
+        echo $data['IncomeOutcomeChart'];
+        $this->view->generate('chart_view.php', 'template_view.php', $data);
     }
 }
