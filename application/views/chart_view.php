@@ -15,10 +15,11 @@
     }
 
     function drawCharts() {
-        <?php if($data!=null){ ?>
-        chart(<?php $data['IncomeOutcomeChart'] ?>, 'income_outcome');
-        chart(<?php $data['IncomeChart'] ?>, 'income');
-        chart(<?php $data['OutcomeChart'] ?>, 'outcome');
+        <?php if($data!=null){
+            echo ($data['IncomeOutcomeChart'])?>
+        chart(<?php echo $data['IncomeOutcomeChart'] ?>, 'income_outcome');
+        chart(<?php echo $data['IncomeChart'] ?>, 'income');
+        chart(<?php echo $data['OutcomeChart'] ?>, 'outcome');
         <?}
             else{
             echo "<p>There is nothing to show</p>";
