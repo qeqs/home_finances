@@ -18,7 +18,7 @@
             <td><input type="password" name="password" required></td>
         </tr>
         <th colspan="2" style="text-align: right">
-            <input type="submit" value="Submit" name="btn"
+            <input type="submit" value="Submit" name="btn" align="center"
                    style="width: 150px; height: 30px;"></th>
     </table>
 </form>
