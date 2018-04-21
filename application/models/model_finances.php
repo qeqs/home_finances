@@ -20,19 +20,19 @@ class model_finances extends Model
         }
         foreach ($outcomes as $income) {
             if (!$income->is_planned) {
-                array_push($data, $this->splitObjects($income));
+                array_push($data, $this->splitObjects($income, -1));
             }
         }
         return $data;
     }
 
 
-    private function splitObjects($finance)
+    private function splitObjects($finance, $sign = 1)
     {
         $type = $this->types->get($finance->type_id);
         return array(
             'Date' => $finance->date,
-            'Value' => $finance->value,
+            'Value' => $finance->value*$sign,
             'Description' => $finance->description,
             'Type' => array(
                 'Value' => $type->name,
