@@ -19,7 +19,8 @@
     function drawCharts() {
         <?php if($data != null){?>
         chart(<?php echo json_encode($data['IncomeOutcomeChart']) ?>, 'income_outcome', 'Total finances');
-        chart(<?php echo json_encode($data['MergedCharts']) ?>, 'income', 'Income/Outcome');
+        chart(<?php echo json_encode($data['IncomeChart']) ?>, 'income', 'Income finances');
+        chart(<?php echo json_encode($data['OutcomeChart']) ?>, 'outcome', 'Outcome finances');
         <?}
         else {
             echo "<p>There is nothing to show</p>";
@@ -28,3 +29,4 @@
 </script>
 <div id="income_outcome"></div>
 <div id="income"></div>
+<div id="outcome"></div>
