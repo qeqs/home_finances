@@ -3,7 +3,7 @@
 <form action="registration/reg" method="post">
     <table class="login">
         <tr>
-            <th colspan="2">Sign up</th>
+            <th colspan="2">Registration</th>
         </tr>
         <tr>
             <td>name</td>

@@ -9,7 +9,6 @@
     {
         echo '<tr><td>'.$row['Date'].'</td><td>'.$row['Value'].'</td><td>'.$row['Description'].'</td><td>'.$row['Type']['Value'].'</td></tr>';
     }
-
 ?>
 </table>
 </p>
