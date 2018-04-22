@@ -173,5 +173,6 @@ a {
 }
 .boxtwo
 {
-	margin: auto;
+	position: relative;
+	right: 30px;
 }
