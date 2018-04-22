@@ -9,7 +9,7 @@
     {
         echo '<tr><td>'.$row['Date'].'</td><td>'.$row['Value'].'</td><td>'.$row['Description'].'</td><td>'.$row['Type']['Value'].'</td><td>Delete/Edit</td></tr>';
     }
-    echo '<form id="add", action="add", method="post">
+    echo '<form id="add", action="/finances/add", method="post">
             <tr><td><input type="date", name="Date"></td>
             <td><input type="number", name="Value"></td>
             <td><input type="text", name="Description"></td>

@@ -17,7 +17,7 @@
     }
 
     function drawCharts() {
-        <?php if(count($data['IncomeOutcomeChart'])>0){?>
+        <?php if(count($data['IncomeOutcomeChart']) > 0){?>
         chart(<?php echo json_encode($data['IncomeOutcomeChart']) ?>, 'income_outcome', 'Total finances');
         chart(<?php echo json_encode($data['IncomeChart']) ?>, 'income', 'Income finances');
         chart(<?php echo json_encode($data['OutcomeChart']) ?>, 'outcome', 'Outcome finances');
@@ -28,14 +28,12 @@
     }
 </script>
 <h1>Charts</h1>
-<div id="stats">
-    <h3>Statistics</h3>
-    <ul>
-        <li>Saldo: <?php echo $data["Statistic"]["saldo"]?></li>
-        <li>Avg income: <?php echo $data["Statistic"]["avg_income"]?></li>
-        <li>Avg outcome: <?php echo $data["Statistic"]["avg_outcome"]?></li>
-    </ul>
-</div>
+<h3>Statistics</h3>
+<ul>
+    <li>Saldo: <?php echo $data["Statistic"]["saldo"] ?></li>
+    <li>Avg income: <?php echo $data["Statistic"]["avg_income"] ?></li>
+    <li>Avg outcome: <?php echo $data["Statistic"]["avg_outcome"] ?></li>
+</ul>
 <div id="income_outcome"></div>
 <div id="income"></div>
 <div id="outcome"></div>
