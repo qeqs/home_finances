@@ -14,9 +14,7 @@
             <td><input type="number", name="Value"></td>
             <td><input type="text", name="Description"></td>
             <td><input type="text", name="Type"></td></tr>
+            <button form="add">Add</button>
           </form>';
 ?>
-<form>
-    <button form="add">Add</button>
-</form>
 </p>
