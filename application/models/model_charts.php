@@ -15,31 +15,31 @@ class model_charts extends Model
 
     public function getIncomeChart($user)
     {
-        $incomes = $this->incomeManager->getByColumn("user_id", $user->id);
+        $incomes = $this->is_not_planned($this->incomeManager->getByColumn("user_id", $user->id));
         return $this->toChartData($incomes);
     }
 
     public function getOutcomeChart($user)
     {
-        $outcomes = $this->outcomeManager->getByColumn("user_id", $user->id);
+        $outcomes = $this->is_not_planned($this->outcomeManager->getByColumn("user_id", $user->id));
         return $this->toChartData($outcomes);
     }
 
     public function getIncomeOutcomeChart($user)
     {
-        $outcomes = $this->outcomeManager->getByColumn("user_id", $user->id);
-        $incomes = $this->incomeManager->getByColumn("user_id", $user->id);
+        $outcomes = $this->is_not_planned($this->outcomeManager->getByColumn("user_id", $user->id));
+        $incomes = $this->is_not_planned($this->incomeManager->getByColumn("user_id", $user->id));
         return array_merge($this->toChartData($incomes), $this->toChartData($outcomes, -1));
     }
 
     public function stats($user)
     {
-        $outcomes = $this->outcomeManager->getByColumn("user_id", $user->id);
-        $incomes = $this->incomeManager->getByColumn("user_id", $user->id);
+        $outcomes = $this->is_not_planned($this->outcomeManager->getByColumn("user_id", $user->id));
+        $incomes = $this->is_not_planned($this->incomeManager->getByColumn("user_id", $user->id));
         return array(
-            "saldo" => $this->statistic->saldo($incomes, $outcomes),
-            "avg_income" => $this->statistic->avg($incomes),
-            "avg_outcome" => $this->statistic->avg($outcomes)
+            "saldo" => strval($this->statistic->saldo($incomes, $outcomes)),
+            "avg_income" => strval($this->statistic->avg($incomes)),
+            "avg_outcome" => strval($this->statistic->avg($outcomes))
         );
     }
 
@@ -77,4 +77,14 @@ class model_charts extends Model
         return $data;
     }
 
+    public function is_not_planned($arr)
+    {
+        $data = array();
+        foreach ($arr as $item) {
+            if (!$item->is_planned) {
+                array_push($data, $item);
+            }
+        }
+        return $data;
+    }
 }
