@@ -2,7 +2,7 @@
 <p>
 <table>
     All finances of <? session_start(); echo $_SESSION['user']->name;?>
-    <tr><td>Date</td><td>Value</td><td>Description</td><td>Type</td><td></td></tr>
+    <tr align = "center"><td>Date</td><td>Value</td><td>Description</td><td>Type</td><td></td></tr>
 <?php
 
 	foreach($data as $row)
