@@ -12,8 +12,8 @@ class controller_finances extends Controller
     {
         // session_start();
         $user = $_SESSION["user"];
-        if ($user == null) {
-            Route::MainPage();
+        if (!isset($user)) {
+            (new Route)->MainPage();
         }
         $data = $this->model->getFullTable($user);
         $this->view->generate('finances_view.php', 'template_view.php', $data);
@@ -31,7 +31,7 @@ class controller_finances extends Controller
             (new Route)->MainPage();
         }
 
-        $finance = $this->createFinance();
+        $finance = $this->createFinance($user);
         if ($finance->value > 0) {
             if ($finance->value > 0) {
                 $this->model->getIncomes()->save($finance);
@@ -44,7 +44,7 @@ class controller_finances extends Controller
     }
 
 
-    public function createFinance()
+    public function createFinance($user)
     {
         $finance = new Finance();
         if (isset($_POST["Date"]) & isset($_POST["Value"]) & isset($_POST["Type"])) {
@@ -55,9 +55,9 @@ class controller_finances extends Controller
             $type->description = "";
             $type_id = (new TypeManager())->save($type);
             $finance->type_id = $type_id;
-        }
-        else{
-             throw new Exception("Error occurred while creation of new finance");
+            $finance->user_id = $user->id;
+        } else {
+            (new Route())->ErrorPage404();
         }
         if (isset($_POST["Description"])) {
             $finance->description = $_POST["Description"];
