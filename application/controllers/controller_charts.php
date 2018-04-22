@@ -4,6 +4,7 @@ class controller_charts extends Controller
 {
     function __construct()
     {
+        $this->model = new model_charts();
         parent::__construct();
     }
 
@@ -12,13 +13,17 @@ class controller_charts extends Controller
 
         $user = $_SESSION["user"];
         if($user == null){
-            Route::MainPage();
+            (new Route)->MainPage();
         }
-        $model = array(
+        $income = $this->model->getIncomeChart($user);
+        $outcome = $this->model->getOutcomeChart($user);
+        //$merged = $this->model->mergeCharts($income, 'Incomes', $outcome, 'Outcomes');
+        $data = array(
             "IncomeOutcomeChart" => $this->model->getIncomeOutcomeChart($user),
-            "IncomeChart" => $this->model->getIncomeChart($user),
-            "OutcomeChart" => $this->model->getOutcomeChart($user)
+            "IncomeChart" => $income,
+            "OutcomeChart" => $outcome,
+            "Statistic" => $this->model->stats($user)
         );
-        $this->view->generate('chart_view.php', 'template_view.php', $model);
+        $this->view->generate('chart_view.php', 'template_view.php', $data);
     }
 }

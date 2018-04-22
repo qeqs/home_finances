@@ -7,11 +7,11 @@
 	</tr>
 	<tr>
 		<td>login</td>
-		<td><input type="text" name="login"></td>
+		<td><input type="text" name="login" required></td>
 	</tr>
 	<tr>
 		<td>password</td>
-		<td><input type="password" name="password"></td>
+		<td><input type="password" name="password" required></td>
 	</tr>
 	<th colspan="2" style="text-align: right">
 	<input type="submit" value="Submit" name="btn"
@@ -22,7 +22,7 @@
 
 <?php extract($data); ?>
 <?php if($login_status=="access_granted") { ?>
-<p style="color:green">Sucsess.</p>
+<p style="color:green">Success.</p>
 <?php } elseif($login_status=="access_denied") { ?>
 <p style="color:red">Login and/or password was wrong.</p>
 <?php } ?>

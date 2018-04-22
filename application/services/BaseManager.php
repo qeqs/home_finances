@@ -27,6 +27,7 @@ class BaseManager
      *
      * @param $id
      * @return mixed|null
+     * @throws DatabaseException
      */
     public function get($id)
     {
@@ -39,6 +40,7 @@ class BaseManager
      * Select all objects from db
      *
      * @return array
+     * @throws DatabaseException
      */
     public function getAll()
     {
@@ -54,6 +56,7 @@ class BaseManager
      *
      * @param $object
      * @return bool|mysqli_result
+     * @throws ReflectionException
      */
     public function save($object)
     {
@@ -89,6 +92,7 @@ class BaseManager
      * @param $column
      * @param $value
      * @return array
+     * @throws DatabaseException
      */
     public function getByColumn($column, $value){
         $val = $value;
@@ -106,6 +110,7 @@ class BaseManager
      *
      * @param $sql
      * @return mixed|null
+     * @throws DatabaseException
      */
     final protected function executeQuery($sql)
     {
@@ -129,6 +134,7 @@ class BaseManager
      * @param $sql
      * @param $class
      * @return mixed|null
+     * @throws DatabaseException
      */
     final protected function executeQueryForClass($sql, $class)
     {
@@ -210,6 +216,7 @@ class BaseManager
      * @param $object
      * @param array $excludes
      * @return array
+     * @throws ReflectionException
      */
     final protected function getColumns($object, $excludes = array())
     {
@@ -228,6 +235,7 @@ class BaseManager
      * @param $object
      * @param $withId
      * @return bool|string
+     * @throws ReflectionException
      */
     final protected function getColumnsWithValuesAsString($object, $withId)
     {
@@ -235,7 +243,8 @@ class BaseManager
         $columns = $this->getColumns($object);
         foreach ($columns as $key => $value) {
             if ($withId | $key != "id") {
-                $sql .= ", {$key}={$value} ";
+                $val = is_bool($value)? (int)$value : $value;
+                $sql .= ", {$key}={$val} ";
             }
         }
         return substr($sql, 1);
@@ -245,6 +254,7 @@ class BaseManager
      * @param $object
      * @param $withId
      * @return bool|string
+     * @throws ReflectionException
      */
     final protected function getColumnsAsString($object, $withId)
     {
@@ -262,6 +272,7 @@ class BaseManager
      * @param $object
      * @param $withId
      * @return bool|string
+     * @throws ReflectionException
      */
     final protected function getValuesAsString($object, $withId)
     {
@@ -269,7 +280,8 @@ class BaseManager
         $columns = $this->getColumns($object);
         foreach ($columns as $key => $value) {
             if ($withId | $key != "id") {
-                $sql .= ", {$value} ";
+                $val = is_bool($value)? (int)$value : $value;
+                $sql .= ", {$val} ";
             }
         }
         return substr($sql, 1);
