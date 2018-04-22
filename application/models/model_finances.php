@@ -54,6 +54,7 @@ class model_finances extends Model
                 $type->description = "";
                 $this->types->save($type);
             }
+            error_log($type->id);
             $finance->type_id = $type->id;
             $finance->user_id = $user->id;
             $finance->is_planned = false;
