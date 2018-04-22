@@ -64,7 +64,7 @@ class Route
 		else
 		{
 			// todo: throw exception here
-			Route::ErrorPage404();
+			(new Route)->ErrorPage404();
 		}
 	
 	}

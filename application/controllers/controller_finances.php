@@ -27,12 +27,12 @@ class controller_finances extends Controller
     function action_add()
     {
         $user = $_SESSION["user"];
-        if ($user == null) {
-            Route::MainPage();
+        if (!isset($user)) {
+            (new Route)->MainPage();
         }
 
         $finance = $this->createFinance();
-        if (isset($finance) & $finance->value > 0) {
+        if ($finance->value > 0) {
             if ($finance->value > 0) {
                 $this->model->getIncomes()->save($finance);
             } else {
@@ -40,8 +40,7 @@ class controller_finances extends Controller
             }
         }
 
-
-        $this->view->generate('finances_view.php', 'template_view.php', $data);
+        $this->action_index();
     }
 
 
@@ -56,6 +55,9 @@ class controller_finances extends Controller
             $type->description = "";
             $type_id = (new TypeManager())->save($type);
             $finance->type_id = $type_id;
+        }
+        else{
+             throw new Exception("Error occurred while creation of new finance");
         }
         if (isset($_POST["Description"])) {
             $finance->description = $_POST["Description"];
