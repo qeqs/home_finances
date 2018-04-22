@@ -41,6 +41,35 @@ class model_finances extends Model
         );
     }
 
+    public function createFinance($user)
+    {
+        $finance = new Finance();
+        if (isset($_POST["Date"]) & isset($_POST["Value"]) & isset($_POST["Type"])) {
+            $finance->date = $_POST["Date"];
+            $finance->value = $_POST["Value"];
+            $type = $this->types->getByColumn('name', $_POST["Type"]);
+            if($type == null) {
+                $type = new Type();
+                $type->name = $_POST["Type"];
+                $type->description = "";
+                $this->types->save($type);
+            }
+            $finance->type_id = $type_id;
+            $finance->user_id = $user->id;
+            $finance->is_planned = false;
+        } else {
+            (new Route())->ErrorPage404();
+        }
+        if (isset($_POST["Description"])) {
+            $finance->description = $_POST["Description"];
+        }
+
+        if (isset($_POST["Is_planned"])) {
+            $finance->is_planned = $_POST["Is_planned"];
+        }
+        return $finance;
+    }
+
     /**
      * @return IncomeManager
      */

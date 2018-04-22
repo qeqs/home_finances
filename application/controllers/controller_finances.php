@@ -31,7 +31,7 @@ class controller_finances extends Controller
             (new Route)->MainPage();
         }
 
-        $finance = $this->createFinance($user);
+        $finance = $this->model->createFinance($user);
         if ($finance->value > 0) {
             if ($finance->value > 0) {
                 $this->model->getIncomes()->save($finance);
@@ -44,31 +44,6 @@ class controller_finances extends Controller
     }
 
 
-    public function createFinance($user)
-    {
-        $finance = new Finance();
-        if (isset($_POST["Date"]) & isset($_POST["Value"]) & isset($_POST["Type"])) {
-            $finance->date = $_POST["Date"];
-            $finance->value = $_POST["Value"];
-            $type = new Type();
-            $type->name = $_POST["Type"];
-            $type->description = "";
-            $type_id = (new TypeManager())->save($type);
-            error_log($type_id);
-            $finance->type_id = $type_id;
-            $finance->user_id = $user->id;
-            $finance->is_planned = false;
-        } else {
-            (new Route())->ErrorPage404();
-        }
-        if (isset($_POST["Description"])) {
-            $finance->description = $_POST["Description"];
-        }
 
-        if (isset($_POST["Is_planned"])) {
-            $finance->is_planned = $_POST["Is_planned"];
-        }
-        return $finance;
-    }
 
 }
