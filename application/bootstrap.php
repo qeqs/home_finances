@@ -7,6 +7,7 @@ require_once 'services/IncomeManager.php';
 require_once 'services/OutcomeManager.php';
 require_once 'services/TypeManager.php';
 require_once 'services/UserManager.php';
+require_once 'services/StatisticService.php';
 
 require_once 'entities/Finance.php';
 require_once 'entities/Income.php';

@@ -17,12 +17,12 @@ class controller_charts extends Controller
         }
         $income = $this->model->getIncomeChart($user);
         $outcome = $this->model->getOutcomeChart($user);
-        $merged = $this->model->mergeCharts($income, 'Incomes', $outcome, 'Outcomes');
+        //$merged = $this->model->mergeCharts($income, 'Incomes', $outcome, 'Outcomes');
         $data = array(
             "IncomeOutcomeChart" => $this->model->getIncomeOutcomeChart($user),
             "IncomeChart" => $income,
             "OutcomeChart" => $outcome,
-            "MergedCharts" => $merged
+            "Statistic" => $this->model->stats()
         );
         $this->view->generate('chart_view.php', 'template_view.php', $data);
     }

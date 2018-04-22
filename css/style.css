@@ -85,9 +85,9 @@ a {
 	position: relative;
 }
 
-#charts {
-	float: inside;
-	position: center;
+#stats {
+	float: left;
+	position: relative;
 }
 
 #header {
