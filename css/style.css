@@ -165,10 +165,13 @@ a {
 
 .box table {
 	border-collapse:collapse;
-	margin:0 auto;
 }
 
 .box table, th, td {
 	border: 1px solid #e3e3e3;
 	padding: 5px;
+}
+.newbox{
+	position: relative;
+	right: 120px;
 }
