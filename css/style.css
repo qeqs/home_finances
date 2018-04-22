@@ -165,6 +165,7 @@ a {
 
 .box table {
 	border-collapse:collapse;
+	position: center;
 	right: 30px;
 }
 
