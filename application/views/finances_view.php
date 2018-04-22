@@ -1,5 +1,6 @@
 <h1>Finances</h1>
 <p>
+<div id = boxtwo>
 <table>
     All finances of <? session_start(); echo $_SESSION['user']->name;?>
     <tr><td>Date</td><td>Value</td><td>Description</td><td>Type</td><td></td></tr>
@@ -17,4 +18,5 @@
             <td><button form="add">Add</button></td></tr>
           </form>';
 ?>
+</div>
 </p>
