@@ -39,8 +39,8 @@ class controller_finances extends Controller
                 $this->model->getOutcomes()->save($finance);
             }
         }
-
-        $this->action_index();
+        (new Route())->FinancesPage();
+        //$this->action_index();
     }
 
 
@@ -54,8 +54,10 @@ class controller_finances extends Controller
             $type->name = $_POST["Type"];
             $type->description = "";
             $type_id = (new TypeManager())->save($type);
+            error_log($type_id);
             $finance->type_id = $type_id;
             $finance->user_id = $user->id;
+            $finance->is_planned = false;
         } else {
             (new Route())->ErrorPage404();
         }
