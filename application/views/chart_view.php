@@ -17,7 +17,7 @@
     }
 
     function drawCharts() {
-        <?php if($data != null){?>
+        <?php if(count($data['IncomeOutcomeChart'])>0){?>
         chart(<?php echo json_encode($data['IncomeOutcomeChart']) ?>, 'income_outcome', 'Total finances');
         chart(<?php echo json_encode($data['IncomeChart']) ?>, 'income', 'Income finances');
         chart(<?php echo json_encode($data['OutcomeChart']) ?>, 'outcome', 'Outcome finances');

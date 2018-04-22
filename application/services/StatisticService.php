@@ -9,6 +9,6 @@ class StatisticService
 
     public function avg($arr)
     {
-        return array_sum($arr) / count($arr);
+        return count($arr) > 0 ? array_sum($arr) / count($arr) : 0;
     }
 }

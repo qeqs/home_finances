@@ -11,11 +11,12 @@ class Finance
     var $user_id;
 
     public function fromFinance($finance){
-        $date = $finance->date;
-        $value = $finance->value;
-        $description = $finance->description;
-        $is_planned = $finance->is_planned;
-        $user_id = $finance->user_id;
+
+        $this->date = $finance->date;
+        $this->value = $finance->value;
+        $this->description = $finance->description;
+        $this->is_planned = $finance->is_planned;
+        $this->user_id = $finance->user_id;
     }
 
 }
