@@ -64,7 +64,7 @@ class controller_finances extends Controller
         if (isset($_POST["Is_planned"])) {
             $finance->is_planned = $_POST["Is_planned"];
         }
-        return $finance
+        return $finance;
     }
 
 }
