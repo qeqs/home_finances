@@ -14,12 +14,12 @@ class model_plans extends Model
 
         $data = array();
         foreach ($incomes as $income) {
-            if (!$income->is_planned) {
+            if ($income->is_planned) {
                 array_push($data, $this->splitObjects($income));
             }
         }
         foreach ($outcomes as $income) {
-            if (!$income->is_planned) {
+            if ($income->is_planned) {
                 array_push($data, $this->splitObjects($income, -1));
             }
         }
