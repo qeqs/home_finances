@@ -17,4 +17,5 @@
             <td><button form="add">Add</button></td></tr>
           </form>';
 ?>
+</table>
 </p>
