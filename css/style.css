@@ -165,6 +165,7 @@ a {
 
 .box table {
 	border-collapse:collapse;
+	align: center;
 }
 
 .box table, th, td {
