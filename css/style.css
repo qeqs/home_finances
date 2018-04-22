@@ -68,14 +68,14 @@ a {
 
 #content {
 	padding: 0 0 0 10px;
-	width: 615px;
+	width: 715px;
 	margin: 0 0 0 285px;
 	position: relative;
 }
 
-#charts {
-	float: inside;
-	position: center;
+#stats {
+	float: left;
+	position: relative;
 }
 
 #header {
