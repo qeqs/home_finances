@@ -51,7 +51,7 @@ class Route
 			/*
 			 * todo: throw exception here
 			*/
-			Route::ErrorPage404();
+			(new Route)->ErrorPage404();
 		}
 
 		$controller = new $controller_name;//creating controller
@@ -84,7 +84,7 @@ class Route
 
     function FinancesPage(){
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
-        header('Location:'.$host.'/finances');
+        header('Location:'.$host.'finances');
     }
     
 }
