@@ -13,6 +13,7 @@ require_once 'entities/Income.php';
 require_once 'entities/Outcome.php';
 require_once 'entities/Type.php';
 require_once 'entities/User.php';
+require_once 'entities/Plans.php';
 
 require_once 'core/model.php';
 require_once 'core/view.php';

@@ -27,13 +27,13 @@ class model_plans extends Model
     }
 
 
-    private function splitObjects($finance, $sign = 1)
+    private function splitObjects($plans, $sign = 1)
     {
-        $type = $this->types->get($finance->type_id);
+        $type = $this->types->get($plans->type_id);
         return array(
-            'Date' => $finance->date,
-            'Value' => $finance->value*$sign,
-            'Description' => $finance->description,
+            'Date' => $plans->date,
+            'Value' => $plans->value*$sign,
+            'Description' => $plans->description,
             'Type' => array(
                 'Value' => $type->name,
                 'Description' => $type->description
