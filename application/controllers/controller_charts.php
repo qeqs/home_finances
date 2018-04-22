@@ -22,7 +22,7 @@ class controller_charts extends Controller
             "IncomeOutcomeChart" => $this->model->getIncomeOutcomeChart($user),
             "IncomeChart" => $income,
             "OutcomeChart" => $outcome,
-            "Statistic" => $this->model->stats()
+            "Statistic" => $this->model->stats($user)
         );
         $this->view->generate('chart_view.php', 'template_view.php', $data);
     }
