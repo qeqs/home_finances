@@ -48,11 +48,13 @@ class model_finances extends Model
             $finance->date = $_POST["Date"];
             $finance->value = $_POST["Value"];
             $type = $this->types->getByColumn('name', $_POST["Type"]);
-            if($type == null) {
+            if(count($type)==0) {
                 $type = new Type();
                 $type->name = $_POST["Type"];
                 $type->description = "";
                 $this->types->save($type);
+            }else{
+                $type = $type[0];
             }
             error_log($type->id);
             $finance->type_id = $type->id;
