@@ -13,12 +13,6 @@
     <div id="header">
         <div id="logo">
             <a href="/">Home</span> <span class="cms">Finances</span></a>
-            <div id="menu">
-                <ul>
-                    <li class="last"> <p> align="center">Welcome to Home Finances App!</p></li>
-                </ul>
-                <br class="clearfix"/>
-            </div>
         </div>
 <!---->
 <!--        <div id="menu">-->
@@ -32,6 +26,7 @@
     </div>
 
     <div id="content">
+        <h2 align="center">Welcome to Home Finances App!</h2>
         <div class="box">
             <?php include 'application/views/' . $content_view; ?>
         </div>
