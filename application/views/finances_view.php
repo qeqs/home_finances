@@ -17,10 +17,10 @@
             echo '<tr><td>' . $row['Date'] . '</td><td>' . $row['Value'] . '</td><td>' . $row['Description'] . '</td><td>' . $row['Type']['Value'] . '</td><td>Delete/Edit</td></tr>';
         }
         echo '<form id="add", action="/finances/add", method="post">
-            <tr align = "left"><td><input type="date", name="Date"></td>
-            <td><input type="number", name="Value"></td>
-            <td><input type="text", name="Description"></td>
-            <td><input type="text", name="Type"></td>
+            <tr align = "left"><td><input type="date", name="Date" required></td>
+            <td><input type="number", name="Value" required></td>
+            <td><input type="text", name="Description" required></td>
+            <td><input type="text", name="Type" required></td>
             <td><button form="add">Add</button></td></tr>
           </form>';
         ?>
