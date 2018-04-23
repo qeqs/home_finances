@@ -5,6 +5,7 @@ class Route
 
 	static function start()
 	{
+	    $_SESSION['session_started'] = session_start();
 		// default controller/page
 		$controller_name = 'Main';
 		$action_name = 'index';

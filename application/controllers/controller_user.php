@@ -4,7 +4,9 @@ class controller_user extends Controller
 {
     public static function isGuest()
     {
-        //error_log("User " . $_SESSION['user'] . " logged: " . isset($_SESSION['user']));
+        if(!$_SESSION['session_started']){
+            session_start();
+        }
         return !isset($_SESSION['user']);
     }
 }
