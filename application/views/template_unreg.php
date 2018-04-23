@@ -13,7 +13,10 @@
     <div id="header">
         <div id="logo">
             <a href="/">Home</span> <span class="cms">Finances</span></a>
-            <div id="menu"><h1 align="center">Welcome to Home Finances App!</h1></div>
+            <div id="menu">
+                <h1 align="center">Welcome to Home Finances App!</h1>
+                <br class="clearfix"/>
+            </div>
         </div>
 <!---->
 <!--        <div id="menu">-->
