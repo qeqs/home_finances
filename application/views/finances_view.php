@@ -1,4 +1,5 @@
 <h1>Finances</h1>
+
 <p>
 <div class="newbox">
     <div class="btn-group">
