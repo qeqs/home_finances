@@ -15,7 +15,7 @@
             <a href="/">Home</span> <span class="cms">Finances</span></a>
             <div id="menu">
                 <ul>
-                    <li class="last"> <h1 align="center">Welcome to Home Finances App!</h1></li>
+                    <li class="last"> <p> align="center">Welcome to Home Finances App!</p></li>
                 </ul>
                 <br class="clearfix"/>
             </div>
