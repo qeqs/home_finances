@@ -1,177 +1,176 @@
 ﻿
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-	text-decoration: underline;
-	color: #353535;
+    text-decoration: underline;
+    color: #353535;
 }
 
 a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 body {
-	line-height: 1.75em;
-	background: #fff url('../images/00bd.png');
-	
-	font-size: 11.5pt;
-	color: #353535;
+    line-height: 1.75em;
+    background: #fff url('../images/00bd.png');
+
+    font-size: 11.5pt;
+    color: #353535;
 }
 
-body,input {
-	font-family: Kreon, serif;
+body, input {
+    font-family: Kreon, serif;
 }
 
 br.clearfix {
-	clear: both;
+    clear: both;
 }
 
-h1,h2 {
-	text-transform: uppercase;
-	font-weight: normal;
-	font-family: "Open Sans", sans-serif;
-	color: #353535;
-	margin-bottom: 1em;
+h1, h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: "Open Sans", sans-serif;
+    color: #353535;
+    margin-bottom: 1em;
 }
 
 h1 {
-	font-size: 1.75em;
+    font-size: 1.75em;
 }
 
-h2  {
-	font-size: 1.5em;
+h2 {
+    font-size: 1.5em;
 }
 
 img.alignleft {
-	float: left;
-	margin: 5px 30px 20px 0;
+    float: left;
+    margin: 5px 30px 20px 0;
 }
 
 img.aligntop {
-	margin: 5px 0 20px 0;
+    margin: 5px 0 20px 0;
 }
 
 p {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 ul {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 a {
-	color: #353535;
+    color: #353535;
 }
 
 #content {
-	padding: 0 0 0 10px;
-	width: 715px;
-	margin: 0 0 0 285px;
-	position: relative;
+    padding: 0 0 0 10px;
+    width: 715px;
+    margin: 0 0 0 285px;
+    position: relative;
 }
 
 #stats {
-	float: left;
-	position: relative;
+    float: left;
+    position: relative;
 }
 
 #header {
-	height: 130px;
-	padding: 40px;
-	position: relative;
-	background: url(../images/bitok.png) no-repeat 85px 30px;
+    height: 130px;
+    padding: 40px;
+    position: relative;
 }
 
 #logo {
-	position: absolute;
-	top: 40px;
-	left: 20px;
-	height: 130px;
-	line-height: 130px;
-	
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    height: 130px;
+    line-height: 130px;
+
 }
 
 #logo a {
-	color: #ffffff;
-	text-shadow: black 0px 0px 7px;
-	text-decoration: none;
-	font-family: "Open Sans", sans-serif;
-	font-size: 35px;
+    color: #ffffff;
+    text-shadow: black 0px 0px 7px;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 35px;
 }
 
-
 #logo img {
-	margin-left: 70px;
-	vertical-align: middle;
+    margin-left: 70px;
+    vertical-align: middle;
 }
 
 #menu {
-	line-height: 57px;
-	position: absolute;
-	right: 40px;
-	top: 76px;
-	height: 57px;
-	font-family: "Open Sans", sans-serif;
+    line-height: 57px;
+    position: absolute;
+    right: 40px;
+    top: 76px;
+    height: 57px;
+    font-family: "Open Sans", sans-serif;
 }
 
 #menu a {
-	text-transform: uppercase;
-	text-decoration: underline;
-	color: #1C1C1C;
-	font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #1C1C1C;
+    font-size: 1.2em;
 }
 
 #menu a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 #menu ul {
-	padding: 0 20px 0 20px;
-	list-style: none;
+    padding: 0 20px 0 20px;
+    list-style: none;
 }
 
 #menu ul li {
-	display: inline;
-	padding: 10px 10px 10px 10px;
-	margin: 0 8px 0 8px;
+    display: inline;
+    padding: 10px 10px 10px 10px;
+    margin: 0 8px 0 8px;
 }
 
 #wrapper {
-	width: 978px;
-	position: relative;
-	background: #FFF;
-	margin: 0 auto 0 auto;
-	box-shadow: 10px 100px 150px 0px rgba(0,0,0,0.15);
-	border: solid 1px #f3f3f3;
-	border-top: 0;
+    width: 978px;
+    position: relative;
+    background: #FFF;
+    margin: 0 auto 0 auto;
+    box-shadow: 10px 100px 150px 0px rgba(0, 0, 0, 0.15);
+    border: solid 1px #f3f3f3;
+    border-top: 0;
 }
 
 .box img {
-	margin: 0px 20px 0px 0px;
-	border: solid 1px #e3e3e3;
+    margin: 0px 20px 0px 0px;
+    border: solid 1px #e3e3e3;
 }
 
 .box p {
-	margin-bottom: 0em;
+    margin-bottom: 0em;
 }
 
-.box ul{
-	margin-bottom: 0em;
-	list-style: square inside;
+.box ul {
+    margin-bottom: 0em;
+    list-style: square inside;
 }
 
 .box table {
-	border-collapse:collapse;
+    border-collapse: collapse;
 }
 
 .box table, th, td {
-	border: 1px solid #e3e3e3;
-	padding: 5px;
+    border: 1px solid #e3e3e3;
+    padding: 5px;
 }
-.newbox{
-	position: relative;
-	right: 120px;
+
+.newbox {
+    position: relative;
+    right: 120px;
 }
