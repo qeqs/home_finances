@@ -14,18 +14,19 @@
         <div id="logo">
             <a href="/">Home</span> <span class="cms">Finances</span></a>
         </div>
-
-        <div id="menu">
-            <ul>
-                <li class="first active"><a href="/">Main</a></li>
-                <li><a href="/login" id="loginform">Sign in</a></li>
-                <li><a href="registration" id="registerform">Registration</a></li>
-            </ul>
-            <br class="clearfix"/>
-        </div>
+<!---->
+<!--        <div id="menu">-->
+<!--            <ul>-->
+<!--                <li class="first active"><a href="/">Main</a></li>-->
+<!--                <li><a href="/login" id="loginform">Sign in</a></li>-->
+<!--                <li><a href="registration" id="registerform">Registration</a></li>-->
+<!--            </ul>-->
+<!--            <br class="clearfix"/>-->
+<!--        </div>-->
     </div>
 
     <div id="content">
+        <h2 align="center">Welcome to Home Finances App!</h2>
         <div class="box">
             <?php include 'application/views/' . $content_view; ?>
         </div>

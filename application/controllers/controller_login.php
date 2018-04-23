@@ -14,9 +14,9 @@ class Controller_Login extends Controller
             if (isset($user)) {
                 $data["login_status"] = "access_granted";
 
-                session_start();
+                //session_start();
                 $_SESSION['user'] = $user;
-                header('Location:/finances');
+                header('Location:/');
             } else {
                 $data["login_status"] = "access_denied";
             }

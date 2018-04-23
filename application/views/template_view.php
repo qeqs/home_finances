@@ -23,6 +23,10 @@
             <br class="clearfix"/>
         </div>
     </div>
+    <?php
+    session_start();
+    echo "<div id='sidebar'>User: ".$_SESSION['user']->name."</div><br>";
+    ?>
     <div id="content">
         <div class="box">
             <?php include 'application/views/' . $content_view; ?>

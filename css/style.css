@@ -82,6 +82,7 @@ a {
     height: 130px;
     padding: 40px;
     position: relative;
+    /*background: #1C1C1C no-repeat 25px 25px;*/
 }
 
 #logo {
@@ -173,4 +174,11 @@ a {
 .newbox {
     position: relative;
     right: 140px;
+}
+
+#sidebar {
+    border-top: solid 1px #e3e3e3;
+    padding: 0 0 10px;
+
+
 }
