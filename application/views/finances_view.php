@@ -27,8 +27,8 @@
         </ul>
     </div>
     <table id="finances">
-        All finances of <? session_start();
-        echo $_SESSION['user']->name; ?>
+        <caption>All finances of <? session_start();
+            echo $_SESSION['user']->name; ?></caption>
         <thead>
         <tr>
             <th>Date</th>
