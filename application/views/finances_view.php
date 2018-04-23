@@ -1,16 +1,23 @@
 <h1>Finances</h1>
+
 <p>
 <div class="newbox">
-    <table>
-        All finances of <? session_start();
-        echo $_SESSION['user']->name; ?>
+            <button><a href="#" onClick ="$('#finances').tableExport({type:'excel',escape:'false'});"> <img src='icons/xls.png' width='24px'> XLS</a></button>
+            <button><a href="#" onClick ="$('#finances').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> <img src='icons/pdf.png' width='24px'> PDF</a></button>
+
+    <table id="finances">
+        <caption>All finances of <? session_start();
+            echo $_SESSION['user']->name; ?></caption>
+        <thead>
         <tr>
-            <td>Date</td>
-            <td>Value</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td></td>
+            <th>Date</th>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th></th>
         </tr>
+        </thead>
+        <tbody>
         <?php
 
         foreach ($data as $row) {
@@ -24,6 +31,17 @@
             <td><button form="add">Add</button></td></tr>
           </form>';
         ?>
+        </tbody>
     </table>
 </div>
 </p>
+<script type="text/javascript" src="/js/tableExport.js"></script>
+<script type="text/javascript" src="/js/jquery.base64.js"></script>
+<script type="text/javascript" src="/js/html2canvas.js"></script>
+<script type="text/javascript" src="/js/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript" src="/js/jspdf/jspdf.js"></script>
+<script type="text/javascript" src="/js/jspdf/libs/base64.js"></script>
+<script type="text/javaScript">
+    $(document).ready(function(){
+    });
+</script>

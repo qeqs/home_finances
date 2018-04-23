@@ -10,9 +10,10 @@ class controller_finances extends Controller
 
     function action_index()
     {
-        // session_start();
+        //session_start();
         $user = $_SESSION["user"];
-        if (!isset($user)) {
+        error_log(json_encode($user));
+        if (!isset($user) || $user == null) {
             (new Route)->MainPage();
         }
         $data = $this->model->getFullTable($user);
