@@ -2,30 +2,9 @@
 
 <p>
 <div class="newbox">
-    <div class="btn-group">
-        <button class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Table Data</button>
-        <ul class="dropdown-menu " role="menu">
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'json',escape:'false'});"> <img src='icons/json.png' width='24px'> JSON</a></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'json',escape:'false',ignoreColumn:'[2,3]'});"> <img src='icons/json.png' width='24px'> JSON (ignoreColumn)</a></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'json',escape:'true'});"> <img src='icons/json.png' width='24px'> JSON (with Escape)</a></li>
-            <li class="divider"></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'xml',escape:'false'});"> <img src='icons/xml.png' width='24px'> XML</a></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'sql'});"> <img src='icons/sql.png' width='24px'> SQL</a></li>
-            <li class="divider"></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'csv',escape:'false'});"> <img src='icons/csv.png' width='24px'> CSV</a></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'txt',escape:'false'});"> <img src='icons/txt.png' width='24px'> TXT</a></li>
-            <li class="divider"></li>
+            <button><a href="#" onClick ="$('#finances').tableExport({type:'excel',escape:'false'});"> <img src='icons/xls.png' width='24px'> XLS</a></button>
+            <button><a href="#" onClick ="$('#finances').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> <img src='icons/pdf.png' width='24px'> PDF</a></button>
 
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'excel',escape:'false'});"> <img src='icons/xls.png' width='24px'> XLS</a></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'doc',escape:'false'});"> <img src='icons/word.png' width='24px'> Word</a></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'powerpoint',escape:'false'});"> <img src='icons/ppt.png' width='24px'> PowerPoint</a></li>
-            <li class="divider"></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'png',escape:'false'});"> <img src='icons/png.png' width='24px'> PNG</a></li>
-            <li><a href="#" onClick ="$('#finances').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> <img src='icons/pdf.png' width='24px'> PDF</a></li>
-
-
-        </ul>
-    </div>
     <table id="finances">
         <caption>All finances of <? session_start();
             echo $_SESSION['user']->name; ?></caption>
@@ -62,7 +41,6 @@
 <script type="text/javascript" src="/js/jspdf/libs/sprintf.js"></script>
 <script type="text/javascript" src="/js/jspdf/jspdf.js"></script>
 <script type="text/javascript" src="/js/jspdf/libs/base64.js"></script>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
 <script type="text/javaScript">
     $(document).ready(function(){
     });
