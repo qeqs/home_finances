@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Home Finances App!</h1>
+<div id="menu"><h1 align="center">Welcome to Home Finances App!</h1></div>
 
     <?php //session_start()
     if (!controller_user::isGuest()) {

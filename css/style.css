@@ -174,3 +174,10 @@ a {
     position: relative;
     right: 140px;
 }
+
+#sidebar {
+    border-top: solid 1px #e3e3e3;
+    padding: 0 0 10px;
+
+
+}
