@@ -2,7 +2,7 @@
 
 class Controller_Main extends Controller
 {
-    function actionInde x()
+    function action_index()
     {
         if (UserTwo::isGuest()) {
             // Подключаем вид
