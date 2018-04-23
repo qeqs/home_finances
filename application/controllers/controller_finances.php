@@ -12,7 +12,8 @@ class controller_finances extends Controller
     {
         //session_start();
         $user = $_SESSION["user"];
-        if (!isset($user)) {
+        error_log(json_encode($user));
+        if (!isset($user) || $user == null) {
             (new Route)->MainPage();
         }
         $data = $this->model->getFullTable($user);
