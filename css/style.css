@@ -82,6 +82,7 @@ a {
     height: 130px;
     padding: 40px;
     position: relative;
+    background: #1C1C1C no-repeat 70px 25px;
 }
 
 #logo {
