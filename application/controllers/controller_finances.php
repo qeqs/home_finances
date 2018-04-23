@@ -10,7 +10,7 @@ class controller_finances extends Controller
 
     function action_index()
     {
-        // session_start();
+        //session_start();
         $user = $_SESSION["user"];
         if (!isset($user)) {
             (new Route)->MainPage();
