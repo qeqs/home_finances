@@ -56,12 +56,12 @@
     </table>
 </div>
 </p>
-<script type="text/javascript" src="tableExport.js"></script>
-<script type="text/javascript" src="jquery.base64.js"></script>
-<script type="text/javascript" src="html2canvas.js"></script>
-<script type="text/javascript" src="jspdf/libs/sprintf.js"></script>
-<script type="text/javascript" src="jspdf/jspdf.js"></script>
-<script type="text/javascript" src="jspdf/libs/base64.js"></script>
+<script type="text/javascript" src="/js/tableExport.js"></script>
+<script type="text/javascript" src="/js/jquery.base64.js"></script>
+<script type="text/javascript" src="/js/html2canvas.js"></script>
+<script type="text/javascript" src="/js/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript" src="/js/jspdf/jspdf.js"></script>
+<script type="text/javascript" src="/js/jspdf/libs/base64.js"></script>
 <script type="text/javaScript">
     $(document).ready(function(){
     });
