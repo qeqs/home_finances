@@ -62,6 +62,7 @@
 <script type="text/javascript" src="/js/jspdf/libs/sprintf.js"></script>
 <script type="text/javascript" src="/js/jspdf/jspdf.js"></script>
 <script type="text/javascript" src="/js/jspdf/libs/base64.js"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
 <script type="text/javaScript">
     $(document).ready(function(){
     });
