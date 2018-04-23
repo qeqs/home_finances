@@ -1,13 +1,12 @@
 <?php
-class UserTwo extends Controller
+class controller_user extends Controller
 {
     public static function isGuest()
     {
-        if (isset($_SESSION['user'])) {
-            {
-                return false;
-            }
-            return true;
+        $is_guest = !isset($_SESSION['user']);
+        if($is_guest){
+            session_start();
         }
+        return $is_guest;
     }
 }

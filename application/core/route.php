@@ -30,8 +30,6 @@ class Route
 		echo "Controller: $controller_name <br>";
 		echo "Action: $action_name <br>";
 		*/
-		session_start();
-		echo "User: ".$_SESSION['user']->name."<br>";
 
 		$model_file = strtolower($model_name).'.php';
 		$model_path = "application/models/".$model_file;
