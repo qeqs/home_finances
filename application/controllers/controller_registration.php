@@ -28,10 +28,10 @@ class controller_registration extends Controller
             $user->login = $login;
             $user->name = $name;
             $userManager->save($user);
-            Route::MainPage();
+            (new Route)->MainPage();
         }
         else{
-            Route::ErrorPage404();
+            (new Route)->ErrorPage404();
         }
     }
 }
