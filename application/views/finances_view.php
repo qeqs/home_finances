@@ -2,9 +2,10 @@
 
 <p>
 <div class="newbox">
-            <button><a href="#" onClick ="$('#finances').tableExport({type:'excel',escape:'false'});"> <img src='icons/xls.png' width='24px'> XLS</a></button>
-            <button><a href="#" onClick ="$('#finances').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> <img src='icons/pdf.png' width='24px'> PDF</a></button>
-
+    <select>
+        <option><button><a href="#" onClick ="$('#finances').tableExport({type:'excel',escape:'false'});"> <img src='icons/xls.png' width='24px'> XLS</a></button></option>
+           <option><button><a href="#" onClick ="$('#finances').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> <img src='icons/pdf.png' width='24px'> PDF</a></button></option>
+    </select>
     <table id="finances">
         <caption>All finances of <? session_start();
             echo $_SESSION['user']->name; ?></caption>

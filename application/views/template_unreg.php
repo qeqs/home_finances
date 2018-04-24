@@ -24,7 +24,7 @@
     </div>
 
     <div id="content">
-        <h2 align="center">Welcome to Home Finances App!</h2>
+        <h2 align="center">Welcome!</h2>
         <div class="box">
             <?php include 'application/views/' . $content_view; ?>
         </div>
