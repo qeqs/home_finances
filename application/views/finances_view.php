@@ -3,7 +3,7 @@
 <p>
 <div class="newbox">
     <select>
-        <option disabled>Выберите героя</option>
+        <option disabled>Export</option>
         <option>
             <button><a href="#" onClick="$('#finances').tableExport({type:'excel',escape:'false'});"> <img
                             src='icons/xls.png' width='24px'> XLS</a></button>
