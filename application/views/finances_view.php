@@ -3,8 +3,15 @@
 <p>
 <div class="newbox">
     <select>
-        <option><button><a href="#" onClick ="$('#finances').tableExport({type:'excel',escape:'false'});"> <img src='icons/xls.png' width='24px'> XLS</a></button></option>
-           <option><button><a href="#" onClick ="$('#finances').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> <img src='icons/pdf.png' width='24px'> PDF</a></button></option>
+        <option disabled>Выберите героя</option>
+        <option>
+            <button><a href="#" onClick="$('#finances').tableExport({type:'excel',escape:'false'});"> <img
+                            src='icons/xls.png' width='24px'> XLS</a></button>
+        </option>
+        <option>
+            <button><a href="#" onClick="$('#finances').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> <img
+                            src='icons/pdf.png' width='24px'> PDF</a></button>
+        </option>
     </select>
     <table id="finances">
         <caption>All finances of <? session_start();
@@ -43,6 +50,6 @@
 <script type="text/javascript" src="/js/jspdf/jspdf.js"></script>
 <script type="text/javascript" src="/js/jspdf/libs/base64.js"></script>
 <script type="text/javaScript">
-    $(document).ready(function(){
+    $(document).ready(function () {
     });
 </script>
