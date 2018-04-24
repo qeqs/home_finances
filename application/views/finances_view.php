@@ -2,8 +2,7 @@
 
 <p>
 <div class="newbox">
-    <select>
-        <option disabled>Export</option>
+    <select name = "Export">
         <option>
             <button><a href="#" onClick="$('#finances').tableExport({type:'excel',escape:'false'});"> <img
                             src='icons/xls.png' width='24px'> XLS</a></button>
