@@ -12,15 +12,15 @@
         <div id="logo">
             <a href="/">Home</span> <span class="cms">Finances</span></a>
         </div>
-<!---->
-<!--        <div id="menu">-->
-<!--            <ul>-->
-<!--                <li class="first active"><a href="/">Main</a></li>-->
-<!--                <li><a href="/login" id="loginform">Sign in</a></li>-->
-<!--                <li><a href="registration" id="registerform">Registration</a></li>-->
-<!--            </ul>-->
-<!--            <br class="clearfix"/>-->
-<!--        </div>-->
+
+        <div id="menu">
+            <ul>
+                <li class="first active"><a href="/">Main</a></li>
+                <li><a href="/login" id="loginform">Sign in</a></li>
+                <li><a href="registration" id="registerform">Registration</a></li>
+            </ul>
+            <br class="clearfix"/>
+        </div>
     </div>
 
     <div id="content">
