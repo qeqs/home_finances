@@ -85,5 +85,8 @@ class Route
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
         header('Location:'.$host.'finances');
     }
-    
+    function PlansPage(){
+        $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
+        header('Location:'.$host.'plans');
+    }
 }

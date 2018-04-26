@@ -12,12 +12,12 @@ class Plans
     var $goal;
 
     public function fromPlans($plans){
-        $date = $plans->date;
-        $value = $plans->value;
-        $description = $plans->description;
-        $is_planned = $plans->is_planned;
-        $user_id = $plans->user_id;
-        $goal = $plans ->goal;
+        $this->date = $plans->date;
+        $this->value = $plans->value;
+        $this->description = $plans->description;
+        $this->is_planned = $plans->is_planned;
+        $this->user_id = $plans->user_id;
+        $this->goal= $plans->goal;
 
     }
 
