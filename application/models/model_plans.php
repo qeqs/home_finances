@@ -58,7 +58,7 @@ class model_plans extends Model
             error_log($type->id);
             $plans->type_id = $type->id;
             $plans->user_id = $user->id;
-            $plans->is_planned = false;
+            $plans->is_planned = true;
         } else {
             (new Route())->ErrorPage404();
         }
