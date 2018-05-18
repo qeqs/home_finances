@@ -1,5 +1,7 @@
 RewriteEngine on
 
+RewriteBase /~lygin_v_s/
+
 RewriteCond %{REQUEST_URI} !(public|css)
 RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.ico|\.gif|robots\.txt)$ [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
