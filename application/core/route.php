@@ -10,8 +10,9 @@ class Route
 		$controller_name = 'Main';
 		$action_name = 'index';
 		
-		$routes = explode('/',$_SERVER ['PHP_SELF']);// $_SERVER['REQUEST_URI']);
-
+		$routes = explode('/',$_SERVER['PHP_SELF']);// $_SERVER['REQUEST_URI']);
+        error_log($_SERVER['PHP_SELF']);
+        error_log($_SERVER['REQUEST_URI']);
 		if ( !empty($routes[1]) )
 		{	
 			$controller_name = $routes[1];
