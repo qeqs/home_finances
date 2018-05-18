@@ -24,7 +24,7 @@
         foreach ($data as $row) {
             echo '<tr><td>' . $row['Date'] . '</td><td>' . $row['Value'] . '</td><td>' . $row['Description'] . '</td><td>' . $row['Type']['Value'] . '</td><td>Delete/Edit</td></tr>';
         }
-        echo '<form id="add", action="/finances/add", method="post">
+        echo '<form id="add", action="finances/add", method="post">
             <tr align = "left"><td><input type="date", name="Date" required></td>
             <td><input type="number", name="Value" required></td>
             <td><input type="text", name="Description" required></td>
@@ -36,12 +36,12 @@
     </table>
 </div>
 </p>
-<script type="text/javascript" src="/js/tableExport.js"></script>
-<script type="text/javascript" src="/js/jquery.base64.js"></script>
-<script type="text/javascript" src="/js/html2canvas.js"></script>
-<script type="text/javascript" src="/js/jspdf/libs/sprintf.js"></script>
-<script type="text/javascript" src="/js/jspdf/jspdf.js"></script>
-<script type="text/javascript" src="/js/jspdf/libs/base64.js"></script>
+<script type="text/javascript" src="js/tableExport.js"></script>
+<script type="text/javascript" src="js/jquery.base64.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script type="text/javascript" src="js/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript" src="js/jspdf/jspdf.js"></script>
+<script type="text/javascript" src="js/jspdf/libs/base64.js"></script>
 <script type="text/javaScript">
     $(document).ready(function () {
     });

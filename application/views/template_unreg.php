@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Home Finances</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
-    <script src="/js/jquery-1.6.2.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -16,7 +16,7 @@
         <div id="menu">
             <ul>
                 <li class="first active"><a href="/">Main</a></li>
-                <li><a href="/login" id="loginform">Sign in</a></li>
+                <li><a href="login" id="loginform">Sign in</a></li>
                 <li><a href="registration" id="registerform">Registration</a></li>
             </ul>
             <br class="clearfix"/>
