@@ -12,14 +12,14 @@ class Route
 		
 		$routes = explode('/', $_SERVER['REQUEST_URI']);
 
-		if ( !empty($routes[1]) )
+		if ( !empty($routes[count($routes)-2]) )
 		{	
-			$controller_name = $routes[1];
+			$controller_name = $routes[count($routes)-2];
 		}
 
-		if ( !empty($routes[2]) )
+		if ( !empty($routes[count($routes)-1]) )
 		{
-			$action_name = $routes[2];
+			$action_name = $routes[count($routes)-1];
 		}
 
 		$model_name = 'Model_'.$controller_name;
@@ -73,17 +73,17 @@ class Route
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
         header('HTTP/1.1 404 Not Found');
 		header("Status: 404 Not Found");
-		header('Location:'.$host.'404');
+		header('Location:/404');
     }
 
     function MainPage(){
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
-        header('Location:'.$host);
+        header('Location:/');
     }
 
     function FinancesPage(){
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
-        header('Location:'.$host.'finances');
+        header('Location:/finances');
     }
     
 }
