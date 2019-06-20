@@ -13,7 +13,7 @@
         <div id="logo">
             <a href="/">Home</span> <span class="cms">Finances</span></a>
         </div>
-        <div id="sidebar">
+        <div id="menu">
             <ul>
                 <li class="first active"><a href="/">Main</a></li>
                 <li><a href="/finances">Finances</a></li>
