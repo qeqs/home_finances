@@ -30,12 +30,6 @@
     ?>
     <div id="content">
         <div class="box">
-            <div id="vk_post_304244_396"></div><script type="text/javascript">
-  (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//vk.com/js/api/openapi.js?154"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'vk_openapi_js'));
-  (function() {
-    if (!window.VK || !VK.Widgets || !VK.Widgets.Post || !VK.Widgets.Post("vk_post_304244_396", 304244, 396, '9YTmqQThmgpDQP9OzVJ3x1aITrc')) setTimeout(arguments.callee, 50);
-  }());
-</script>
             <?php include 'application/views/' . $content_view; ?>
         </div>
         <br class="clearfix"/>
